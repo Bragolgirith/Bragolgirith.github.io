@@ -1,4 +1,10 @@
 /* Basic sample */
+@font-face {
+    font-family: mon amour one medium;
+    font-style: normal;
+    font-weight: 400;
+    src: local('Mon Amour One Medium'), local('MonAmourOne-Medium'), url(/fonts/mon-amour-one-medium_1431732b118ed534ff171d6bd3f1b4d8.woff) format('woff'), url(/fonts/mon-amour-one-medium_1431732b118ed534ff171d6bd3f1b4d8.ttf) format('truetype')
+}
 
 body {
     overflow: hidden;
@@ -110,7 +116,7 @@ body {
 }
 
 .img-inline {
-    width:50px;
+    width: 50px;
 }
 
 /*Disable selection*/
