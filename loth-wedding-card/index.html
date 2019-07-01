@@ -15,10 +15,15 @@
     <title>Покана - 19 Септември 2019</title>
     <script type="text/javascript" src="extras/jquery.min.1.7.js"></script>
     <script type="text/javascript" src="extras/modernizr.2.5.3.min.js"></script>
+    <style>
+        .hide {
+            display: none;
+        }
+    </style>
 </head>
 <body>
 
-<div class="flipbook-viewport">
+<div class="flipbook-viewport hide">
     <div class="container">
         <div class="flipbook theme-white" id="flipbook">
             <div class="hard">
@@ -130,6 +135,14 @@
         $("#flipbook").removeClass("theme-ancient");
         $("#flipbook").removeClass("theme-lilac");
         $("#flipbook").addClass("theme-lilac");
+    });
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        setTimeout(function(){
+            $(".flipbook-viewport ").removeClass("hide");
+        }, 200);
     });
 </script>
 
