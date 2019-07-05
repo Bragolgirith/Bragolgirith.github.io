@@ -37,10 +37,9 @@ $pageflip.pageflipInit( {
     CenterSinglePage: true,
     SinglePageMode: false,
     ShowCopyright: false,
-    // Copyright: '©2016 pageflip-books.com',
     Copyright: '©2019 bubi-jabi.wedding',
     Key: 'OMG2uZPRR94Y2Voc6f6X0d'
-}, "card_a5_v3" );
+}, "card" );
 var API = $pageflip.pageflip();
 function p( n ) { API.gotoPageLabel( "t"+n, true ); }
 function u( url ) { window.open( url ); }
