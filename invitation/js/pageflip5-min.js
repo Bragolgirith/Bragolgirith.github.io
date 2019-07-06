@@ -396,11 +396,11 @@ var _gaq = _gaq || [];
                         bn[ic]["l"] = hk
                     }
                     if (hv[id]["v"]) {
-                        ak(3, id);
+                        ZOOM_POST_DO_NOTHING(3, id);
                         hv[id]["v"] = hl
                     }
                     if (hv[h1]["v"]) {
-                        ak(3, h1);
+                        ZOOM_POST_DO_NOTHING(3, h1);
                         hv[h1]["v"] = hl
                     }
                 }
@@ -471,7 +471,7 @@ var _gaq = _gaq || [];
                         }
                     } else {
                         if (h9.v) {
-                            ak(3, hT);
+                            ZOOM_POST_DO_NOTHING(3, hT);
                             h9.v = hl
                         }
                     }
@@ -492,7 +492,7 @@ var _gaq = _gaq || [];
                         }
                     } else {
                         if (h9.v) {
-                            ak(3, hT);
+                            ZOOM_POST_DO_NOTHING(3, hT);
                             h9.v = hl
                         }
                     }
@@ -538,7 +538,7 @@ var _gaq = _gaq || [];
                     if (hQ >= 0) {
                         ht.splice(hQ, 1)
                     }
-                    ak(5, h8);
+                    ZOOM_POST_DO_NOTHING(5, h8);
                     hT["$p"]["remove"]();
                     if (hT.n) {
                         hT.n = hl;
@@ -712,7 +712,7 @@ var _gaq = _gaq || [];
                 }
             }
             for (ic = 0; ic < ih.length; ic++) {
-                ak(ih[ic]["e"], ih[ic]["p"])
+                ZOOM_POST_DO_NOTHING(ih[ic]["e"], ih[ic]["p"])
             }
             db();
             n();
@@ -848,8 +848,8 @@ var _gaq = _gaq || [];
             } else {
                 cM = hH.v
             }
-            ak(1, hH.k);
-            ak(1, hH.w);
+            ZOOM_POST_DO_NOTHING(1, hH.k);
+            ZOOM_POST_DO_NOTHING(1, hH.w);
             dF(hH);
             bn.splice(hI, 1);
             bp = bn.length != 0;
@@ -1265,7 +1265,7 @@ var _gaq = _gaq || [];
             J()
         }, dW = false, dU = function (hH) {
             if (ew) {
-                af(hH)
+                preventDefault(hH)
             }
         }, dS = function (hH) {
             cS(hH, true)
@@ -1287,7 +1287,7 @@ var _gaq = _gaq || [];
                 c5(hK, c2);
                 if (b2) {
                     b2 = hl;
-                    af(hK);
+                    preventDefault(hK);
                     return;
                     if (!bZ) {
                         bZ = hk;
@@ -1296,14 +1296,14 @@ var _gaq = _gaq || [];
                     }
                 }
                 if (bZ) {
-                    af(hK);
+                    preventDefault(hK);
                     return
                 }
             }
             var hJ = br(bM, bL, aT);
             if (hJ && bw()) {
                 c7();
-                af(hK);
+                preventDefault(hK);
                 switch (hJ) {
                     case"TL":
                     case"BL":
@@ -1336,7 +1336,7 @@ var _gaq = _gaq || [];
                 hJ = aK(bM, bL);
                 if (hJ && bw()) {
                     c7();
-                    af(hK);
+                    preventDefault(hK);
                     if (d4) {
                         if (!fI && hJ == "IL") {
                             hJ = "IR"
@@ -1368,8 +1368,8 @@ var _gaq = _gaq || [];
                             break
                     }
                 } else {
-                    if (N && aH(hK)) {
-                        af(hK);
+                    if (IS_ZOOMED_IN && aH(hK)) {
+                        preventDefault(hK);
                         y = hk;
                         d0 = hl;
                         var hH = bB(hK);
@@ -1386,12 +1386,12 @@ var _gaq = _gaq || [];
                 return
             }
             if (aQ || aT || y || bZ) {
-                af(hK)
+                preventDefault(hK)
             }
             if (dW && bZ) {
                 bI();
                 bF(cr, cp);
-                af(hK);
+                preventDefault(hK);
                 return
             }
             bD(hK);
@@ -1408,7 +1408,7 @@ var _gaq = _gaq || [];
             } else {
                 if (aQ) {
                 } else {
-                    if (!dW && !N && f9) {
+                    if (!dW && !IS_ZOOMED_IN && f9) {
                         if (hJ) {
                             switch (hJ) {
                                 case"TL":
@@ -1446,7 +1446,7 @@ var _gaq = _gaq || [];
                 }
             }
             if (aQ || aT) {
-                af(hI);
+                preventDefault(hI);
                 dd(bn[bn.length - 1]);
                 bv = hl;
                 if (!dW) {
@@ -1454,7 +1454,7 @@ var _gaq = _gaq || [];
                 }
             } else {
                 if (y) {
-                    af(hI);
+                    preventDefault(hI);
                     y = hl;
                     if (!aH(hI)) {
                         return hk
@@ -1494,31 +1494,31 @@ var _gaq = _gaq || [];
             var hH = hI.keyCode;
             switch (hI.keyCode) {
                 case 37:
-                    af(hI);
+                    preventDefault(hI);
                     aj.gotoPrevPage(hk);
                     break;
                 case 39:
-                    af(hI);
+                    preventDefault(hI);
                     aj.gotoNextPage(hk);
                     break;
                 case 40:
-                    af(hI);
+                    preventDefault(hI);
                     aj.gotoLastPage(hk);
                     break;
                 case 38:
-                    af(hI);
+                    preventDefault(hI);
                     aj.gotoFirstPage(hk);
                     break;
                 case 90:
-                    af(hI);
+                    preventDefault(hI);
                     aj.toggleZoom();
                     break;
                 case 84:
-                    af(hI);
+                    preventDefault(hI);
                     aj.showThumbnails();
                     break;
                 case 65:
-                    af(hI);
+                    preventDefault(hI);
                     aj.toggleAutoFlip();
                     break
             }
@@ -1649,11 +1649,11 @@ var _gaq = _gaq || [];
             return hH
         }, bG = function () {
             if (bZ) {
-                var hH = N;
+                var hH = IS_ZOOMED_IN;
                 if (cs > ab) {
-                    N = hl
+                    IS_ZOOMED_IN = hl
                 } else {
-                    N = hk
+                    IS_ZOOMED_IN = hk
                 }
                 bZ = hl;
                 bW = [];
@@ -1663,9 +1663,9 @@ var _gaq = _gaq || [];
                 W = hI.x;
                 V = hI.y;
                 cg = cd = 0;
-                I();
-                if (hH != N) {
-                    ak(N ? 9 : 10, cM)
+                SET_ZOOM_BTN_STATE();
+                if (hH != IS_ZOOMED_IN) {
+                    ZOOM_POST_DO_NOTHING(IS_ZOOMED_IN ? 9 : 10, cM)
                 }
             }
         }, bF = function (hI, hH) {
@@ -1858,7 +1858,7 @@ var _gaq = _gaq || [];
                 hH *= hK > 0 ? -1 : 1
             }
             return hH
-        }, af = function (hH) {
+        }, preventDefault = function (hH) {
             return hH.preventDefault()
         }, ae = function (hH, hI) {
             if (dj == hE) {
@@ -2181,9 +2181,9 @@ var _gaq = _gaq || [];
                 return hk
             }
             return hl
-        }, N, M, ab, aa, Z, Y, X, W, V, U, T, S, B, A, z, y, x = function () {
+        }, IS_ZOOMED_IN, M, ab, aa, Z, Y, X, W, V, U, T, S, B, A, z, y, x = function () {
             M = ab = aa = Z = Y = X = W = V = U = T = S = B = A = z = 0;
-            N = y = hl
+            IS_ZOOMED_IN = y = hl
         }, w = function (hL, hK) {
             var hI = cG, hH = cD;
             if (d4) {
@@ -2205,24 +2205,24 @@ var _gaq = _gaq || [];
             if (M == 0) {
                 x()
             } else {
-                if (N) {
+                if (IS_ZOOMED_IN) {
                     var hJ = F(W, V);
                     Y = W = hJ.x;
                     X = V = hJ.y
                 }
             }
-            I()
-        }, L = function () {
-            if (!N && cy < 1) {
-                N = hk;
-                s(hk);
-                e7(hk);
-                ak(9, cM)
+            SET_ZOOM_BTN_STATE()
+        }, ZOOM_IN = function () {
+            if (!IS_ZOOMED_IN && cy < 1) {
+                IS_ZOOMED_IN = hk;
+                setZIndex12(hk);
+                setZIndex11(hk);
+                ZOOM_POST_DO_NOTHING(9, cM)
             }
-        }, K = function () {
-            if (N && cy < 1) {
-                N = hl;
-                ak(10, cM)
+        }, ZOOM_OUT = function () {
+            if (IS_ZOOMED_IN && cy < 1) {
+                IS_ZOOMED_IN = hl;
+                ZOOM_POST_DO_NOTHING(10, cM)
             }
         }, J = function () {
             if (bZ) {
@@ -2233,7 +2233,7 @@ var _gaq = _gaq || [];
                 P();
                 return
             }
-            if (N) {
+            if (IS_ZOOMED_IN) {
                 if (ab != 1) {
                     ab += (1 - ab) / 5;
                     if (ha(1 - ab) < 0.01) {
@@ -2249,8 +2249,8 @@ var _gaq = _gaq || [];
                     ab -= ab / 5;
                     if (ha(ab) < 0.01) {
                         ab = 0;
-                        s();
-                        e7()
+                        setZIndex12();
+                        setZIndex11()
                     }
                     P();
                     if (ge) {
@@ -2259,10 +2259,10 @@ var _gaq = _gaq || [];
                 }
             }
             H()
-        }, I = function () {
+        }, SET_ZOOM_BTN_STATE = function () {
             if (ca) {
-                hG("#b-zoomout")["css"]("display", N ? "" : "none");
-                hG("#b-zoomin")["css"]("display", N ? "none" : "");
+                hG("#b-zoomout")["css"]("display", IS_ZOOMED_IN ? "" : "none");
+                hG("#b-zoomin")["css"]("display", IS_ZOOMED_IN ? "none" : "");
                 m(hG("#b-zoomin"), (M > 0 && eR))
             }
         }, H = function () {
@@ -2421,14 +2421,14 @@ var _gaq = _gaq || [];
                 ca.addClass(hD)
             }
             b9 = hG("#pf-pagerin");
-            s();
+            setZIndex12();
             r();
             if (eh) {
                 var hH = hG("#pf-copyright-text");
                 hH.css("display", "block");
                 hH.html((c3 ? ek : em))
             }
-        }, s = function (hH) {
+        }, setZIndex12 = function (hH) {
             if (ca) {
                 ca.css("z-index", (f5 || hH) ? 12 : 2)
             }
@@ -2438,50 +2438,50 @@ var _gaq = _gaq || [];
                 hH += " " + g0.c
             }
             hG("#b-first")["bind"](hH, function (hI) {
-                af(hI);
+                preventDefault(hI);
                 aj.gotoFirstPage(hk)
             });
             hG("#b-prev")["bind"](hH, function (hI) {
-                af(hI);
+                preventDefault(hI);
                 aj.gotoPrevPage(hk)
             });
             hG("#b-next")["bind"](hH, function (hI) {
-                af(hI);
+                preventDefault(hI);
                 aj.gotoNextPage(hk)
             });
             hG("#b-last")["bind"](hH, function (hI) {
-                af(hI);
+                preventDefault(hI);
                 aj.gotoLastPage(hk)
             });
             hG("#b-play")["bind"](hH, function (hI) {
-                af(hI);
+                preventDefault(hI);
                 aj.startAutoFlip()
             });
             m(hG("#b-play"), gs);
             hG("#b-pause")["bind"](hH, function (hI) {
-                af(hI);
+                preventDefault(hI);
                 aj.stopAutoFlip()
             });
             hG("#b-fullscreen")["bind"](hH, function (hI) {
-                af(hI);
+                preventDefault(hI);
                 aj.enterFullScreen()
             });
             m(hG("#b-fullscreen"), fS);
             hG("#b-fullscreenoff")["bind"](hH, function (hI) {
-                af(hI);
+                preventDefault(hI);
                 aj.exitFullScreen()
             });
             hG("#b-zoomin")["bind"](hH, function (hI) {
-                af(hI);
+                preventDefault(hI);
                 aj.zoomIn()
             });
             hG("#b-zoomout")["bind"](hH, function (hI) {
-                af(hI);
+                preventDefault(hI);
                 aj.zoomOut()
             });
             if (cX) {
                 hG("#b-twitter")["bind"](hH, function (hI) {
-                    af(hI);
+                    preventDefault(hI);
                     bm()
                 })
             } else {
@@ -2489,7 +2489,7 @@ var _gaq = _gaq || [];
             }
             if (cW) {
                 hG("#b-facebook")["bind"](hH, function (hI) {
-                    af(hI);
+                    preventDefault(hI);
                     bj()
                 })
             } else {
@@ -2497,7 +2497,7 @@ var _gaq = _gaq || [];
             }
             if (cV) {
                 hG("#b-pinterest")["bind"](hH, function (hI) {
-                    af(hI);
+                    preventDefault(hI);
                     bh()
                 })
             } else {
@@ -2505,19 +2505,19 @@ var _gaq = _gaq || [];
             }
             if (dz) {
                 hG("#b-google")["bind"](hH, function (hI) {
-                    af(hI);
+                    preventDefault(hI);
                     bl()
                 })
             } else {
                 hG("#b-google")["css"]({display: "none"})
             }
             hG("#b-thumbs")["bind"](hH, function (hI) {
-                af(hI);
+                preventDefault(hI);
                 aj.showThumbnails()
             });
             m(hG("#b-thumbs"), f3);
             hG("#b-close")["bind"](hH, function (hI) {
-                af(hI);
+                preventDefault(hI);
                 aj.closePageflip()
             });
             ca.bind(gY.b, p);
@@ -2549,7 +2549,7 @@ var _gaq = _gaq || [];
                 return hl
             });
             b1();
-            I();
+            SET_ZOOM_BTN_STATE();
             n()
         }, q = function (hJ) {
             var hI = "w1000", hH = hG("#pf-controls");
@@ -2702,7 +2702,7 @@ var _gaq = _gaq || [];
                         hG("#pf-thright")["bind"](g0.a, eT)["bind"](g0.c, dZ)
                     }
                 }
-                e7();
+                setZIndex11();
                 c4 = hl;
                 dG = 0;
                 e9.bind(gY.a, dR)["bind"](gY.c, et)["bind"](gY.b, dO)["css"]("height", fk + 16);
@@ -2716,7 +2716,7 @@ var _gaq = _gaq || [];
                 f3 = hl;
                 a.remove()
             }
-        }, e7 = function (hH) {
+        }, setZIndex11 = function (hH) {
             if (f3) {
                 a.css("z-index", (fZ || hH) ? 11 : 1)
             }
@@ -2745,11 +2745,11 @@ var _gaq = _gaq || [];
                     break
             }
             e6 = hk, e5 = hl;
-            af(hH)
+            preventDefault(hH)
         }, dZ = function (hH) {
             if (!c4) {
                 e5 = hk;
-                af(hH)
+                preventDefault(hH)
             }
         }, dX = function (hH) {
             var hI = {width: fm, height: fk, "background-size": "contain"};
@@ -2770,7 +2770,7 @@ var _gaq = _gaq || [];
             }
         }, dT = function (hH) {
             if (!aQ && !aT) {
-                af(hH);
+                preventDefault(hH);
                 hH.stopPropagation()
             }
         }, dR = function (hH) {
@@ -3081,7 +3081,7 @@ var _gaq = _gaq || [];
             gx -= gx % 2;
             gv += (1 - gv % 2)
         }, bw = function () {
-            return !(N && !eN)
+            return !(IS_ZOOMED_IN && !eN)
         }, bt, b8 = function () {
             var hH = hv[cM]["x"] || hv[cM + 1]["x"] || fQ;
             bt = hF.setTimeout(b3, hH)
@@ -3245,7 +3245,7 @@ var _gaq = _gaq || [];
             }
         },
         al = ["onFlip", "onFlipEnd", "onTop", "onTopEnd", "onLoad", "onUnload", "onRemove", "onHide", "onShow", "onZoomIn", "onZoomOut"],
-        ak = function (hI, hJ) {
+        ZOOM_POST_DO_NOTHING = function (hI, hJ) {
             if (bq) {
                 var hH = bq[al[hI]];
                 if (hH) {
@@ -3331,14 +3331,14 @@ var _gaq = _gaq || [];
                 }
             }, zoomIn: function () {
                 if (eR) {
-                    L();
-                    I()
+                    ZOOM_IN();
+                    SET_ZOOM_BTN_STATE()
                 }
             }, zoomOut: function () {
-                K();
-                I()
+                ZOOM_OUT();
+                SET_ZOOM_BTN_STATE()
             }, toggleZoom: function () {
-                N ? aj.zoomOut() : aj.zoomIn()
+                IS_ZOOMED_IN ? aj.zoomOut() : aj.zoomIn()
             }, hotKeys: function (hH) {
                 eK = hH
             }, mouseControl: function (hH) {

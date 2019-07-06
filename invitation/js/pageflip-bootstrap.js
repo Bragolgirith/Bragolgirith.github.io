@@ -43,3 +43,8 @@ $pageflip.pageflipInit( {
 var API = $pageflip.pageflip();
 function p( n ) { API.gotoPageLabel( "t"+n, true ); }
 function u( url ) { window.open( url ); }
+
+// var $linkWebsite = $('#link-website');
+// $linkWebsite.click(function() {
+//     location.href='https://bubi-jabi.wedding';
+// });
