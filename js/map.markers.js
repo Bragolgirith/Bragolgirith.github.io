@@ -20,12 +20,5 @@ var map_markers = [
 		"longitude":23.347008,
 		"icon":"fa-glass", //Check the full list of icons at http://fortawesome.github.io/Font-Awesome/icons/
 		"infoWindow":"18:30 <br> Ресторант Форест <br> 1113 Борисова Градина"
-	},
-	{
-		"title": "Хотел",
-		"latitude":42.6741459,
-		"longitude":23.3484383,
-		"icon":"fa-bed", //Check the full list of icons at http://fortawesome.github.io/Font-Awesome/icons/
-		"infoWindow":"Парк Хотел Москва <br> ул. \"Незабравка\" 25"
-	},
+	}
 ];
