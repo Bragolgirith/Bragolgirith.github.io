@@ -4994,3 +4994,9 @@ div.dark_square #pp_full_res .pp_inline {
     background-image: url('../images/divider_5@2x.png');
   }
 }
+
+.time-limit {
+  /*color: #F5FAE6;*/
+  color: #6C4C7A;
+  /*font-weight: bold;*/
+}
