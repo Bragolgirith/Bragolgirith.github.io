@@ -25,7 +25,7 @@ var	mobileMenuTitle = "Навигация",					//The title of the mobile menu
 	
 	
 	//COUNTDOWN VARIABLES
-	c_days = "ДНИ",							//Countdown "Days" label
+	c_days = "ДЕНА",							//Countdown "Days" label
 	c_hours = "ЧАСА",							//Countdown "Hours" label
 	c_minutes = "МИН.",							//Countdown "Minutes" label
 	c_seconds = "СЕК.",							//Countdown "Seconds" label
