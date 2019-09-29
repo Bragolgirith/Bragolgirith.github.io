@@ -29,4 +29,4 @@ var	mobileMenuTitle = "Навигация",					//The title of the mobile menu
 	c_hours = "ЧАСА",							//Countdown "Hours" label
 	c_minutes = "МИН.",							//Countdown "Minutes" label
 	c_seconds = "СЕК.",							//Countdown "Seconds" label
-	countdownEndMsg = "Започна се!";			//Message to display when the countdown reaches the end
+	countdownEndMsg = "Свърши се!";			//Message to display when the countdown reaches the end
